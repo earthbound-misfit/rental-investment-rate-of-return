@@ -48,15 +48,15 @@ def Calculate(self):
             print('Have a great day!')
             break
         elif user_input.lower() == 'c':
-            print("Please enter all input in numbers: ")
-            self.income = self.monthly_income()
-            self.expenses = self.monthly_expenses()
-            self.investment = self.total_investment()
-            self.cash_flow = self.annual_cash_flow()
-            self.rate_of_return = self.cash_on_cash_roi()
+            print("Please enter all input in numbers; if none, enter 0: ")
+            self.income = float(self.monthly_income())
+            self.expenses = float(self.monthly_expenses())
+            self.investment = float(self.total_investment())
+            self.cash_flow = float(self.annual_cash_flow())
+            self.rate_of_return = float(self.cash_on_cash_roi())
         else:
             print('Invalid input, please enter a valid option.')
-            Calculate()
+            Calculate(self)
 
 property1 = PropertyROI()
 
